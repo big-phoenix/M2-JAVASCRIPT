@@ -1,10 +1,27 @@
 let nom = ['j','o','s','e','j','a','v','i','e','r'];
+let vocales = ["a","e","i","o","u"];
+let vocal = false;
 
 for(i=0; i < nom.length; i++){
 
-    let resultado;
+    let contador = 0;
+    while(contador != vocales.length ){
 
-    document.getElementById("respueta").innerHTML += nom[i]+"<br>";
-    console.log(resultado = nom[i]);
+        if(nom[i] == vocales[contador]){
+            document.getElementById("respueta").innerHTML += "VOCAL: " +nom[i]+ "<br>";
+            vocal=true;
+            contador = vocales.length;
+        } else {
+            contador++;
+        }
+
+    }
+
+    if(vocal != true){
+        document.getElementById("respueta").innerHTML += "CONSONTANT <br>";
+    }
+
+    vocal=false;
+    conatador = 0;
 
 }
