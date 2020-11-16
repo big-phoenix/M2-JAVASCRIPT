@@ -1,23 +1,6 @@
-let mapa = new Map();
 let nom = ['j','o','s','e','j','a','v','i','e','r'];
+let cognom = ['b','e','n','i','t','o'];
 
-
-console.log(nom);
-
-for(i=0; i < nom.length; i++){
-
-    let num = 0;
-
-    for(vocal of nom){
-
-        if(vocal == nom[i]){
-            num++;
-        }
-
-    }
-
-    mapa.set(nom[i], num);
-
-}
-
-console.log(mapa);
+nom.push(' ');
+console.log(nom.concat(cognom));
+document.getElementById("respueta").innerHTML += nom.concat(cognom);
