@@ -1,27 +1,23 @@
+let mapa = new Map();
 let nom = ['j','o','s','e','j','a','v','i','e','r'];
-let vocales = ["a","e","i","o","u"];
-let vocal = false;
+
+
+console.log(nom);
 
 for(i=0; i < nom.length; i++){
 
-    let contador = 0;
-    while(contador != vocales.length ){
+    let num = 0;
 
-        if(nom[i] == vocales[contador]){
-            document.getElementById("respueta").innerHTML += "VOCAL: " +nom[i]+ "<br>";
-            vocal=true;
-            contador = vocales.length;
-        } else {
-            contador++;
+    for(vocal of nom){
+
+        if(vocal == nom[i]){
+            num++;
         }
 
     }
 
-    if(vocal != true){
-        document.getElementById("respueta").innerHTML += "CONSONTANT <br>";
-    }
-
-    vocal=false;
-    conatador = 0;
+    mapa.set(nom[i], num);
 
 }
+
+console.log(mapa);
